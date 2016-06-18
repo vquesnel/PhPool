@@ -48,6 +48,7 @@ else
 <?PHP
 
 $add = './commande.csv';
+$prix = 0;
 if (!empty($_SESSION['login']))
 {
 	file_put_contents($add, "", FILE_APPEND);
@@ -59,6 +60,7 @@ if (!empty($_SESSION['login']))
 		{
 			if ($r32[$i]['login'] == $_SESSION['login'])
 			{
+				$prix = $prix + calcule_prix($r32[$i]['ville']) * $r32[$i]['passager'];
 				echo '<div class="one">';
 				echo '<p style="width:200px"> Destination : '.$r32[$i]['ville'].'</p><br />';
 				echo '<p>Date de départ : '.$r32[$i]['depart'].'<br />';
@@ -67,7 +69,7 @@ if (!empty($_SESSION['login']))
 				echo '<p style="width:150px">Prix total : '.(calcule_prix($r32[$i]['ville']) * $r32[$i]['passager']).'</p>';
 				echo '<form method="post" action="valider.php">';
 				echo '<input type="hidden" name="ville" value='.$r32[$i]['ville'].'>';
-				echo '<input style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 50px;height: 50px "type="submit" name="submite" value="Annuler">';
+				echo '<input style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 50px;height: 50px "type="submit" name="submite" value="Payer">';
 				echo '</form>';
 				echo '</div>';
 				echo '<br />';
@@ -81,6 +83,7 @@ else
 	$i = 0;
 	while ($_SESSION['panier'][$i] !== NULL)
 	{
+		$prix = $prix + calcule_prix($r32[$i]['ville']) * $r32[$i]['passager'];
 		echo '<div class="one">';
 		echo '<p style="width:200px"> Destination : '.$_SESSION['panier'][$i]['ville'].'</p><br />';
 
@@ -92,7 +95,7 @@ else
 		echo '<form method="post" action="valider.php">';
 
 		echo '<input type="hidden" name="ville" value='.$_SESSION['panier'][$i]['ville'].'>';
-		echo '<input style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 90px;height: 50px "type="submit" name="submit" value="Payer">';
+		echo '<input style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 50px;height: 50px "type="submit" name="submit" value="Payer">';
 
 		echo '</form>';
 		echo '</div>';
@@ -104,11 +107,12 @@ else
 ?>
 <hr>
 </hr>
-	<div>
-	<p> Prix Total des Voyages selectionnés : </p><br />
-
-
-</div>
+	<form method="post" action="valider.php">
+		<div id="payer" align="center">
+			<div><p> Prix Total des Voyages selectionnés : <?PHP echo $prix ?></p></div>
+			<div><input style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 50px;height: 50px "type="submit" name="submit" value="Annuler"></div>
+		</div>
+	</form>
 
 <!--
 Faire des cookie pour sauvegarder les donner utilisateur qui sont pas connecter en plus des SESSION

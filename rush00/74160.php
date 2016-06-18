@@ -39,7 +39,6 @@ foreach ($tab as $elem)
 			</a>
 			<nav>
 				<ul>
-					<li><a href="index.php">Accueil</a></li>
 					<li><a href="74160.php">Tableau de bord</a></li>
 					<li><a href="74161.php">Produits</a></li>
 					<li><a href="74162.php">Catégories</a></li>
