@@ -1,0 +1,231 @@
+body {
+	background-color: #F8F8FF;
+	font-family: 'Trebuchet MS', Arial, sans-serif;
+	color: #181818;
+}
+
+#bloc_page {
+	width: 900px;
+	margin: auto;
+}
+
+section h1, footer h1, nav a
+{
+    font-family: Dayrom, serif;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+header{
+	 display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#logo {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}
+
+#logo img{
+	width: 59px;
+	height: 60px;
+}
+
+header h1
+{
+    font-family: 'BallparkWeiner', serif;
+    font-size: 2.5em;
+    font-weight: normal;
+    margin: 0 0 0 10px;
+}
+
+header h2
+{
+    font-family: Dayrom, serif;
+    font-size: 1.1em;
+    margin-top: 0px;
+    margin-left: 50px;
+    font-weight: normal;
+}
+
+#toyo {
+	font-size: 0.8em;
+	font-family: 'Oswald', serif;
+}
+nav ul
+{
+	list-style-type: none;
+	display: flex;
+}
+nav li {
+	margin-right: 10px;
+}
+
+nav a {
+	font-weight: 600;
+	font-size: 0.9em;
+	color: #181818;
+	padding-bottom: 3px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #760001;
+	border-bottom: 3px solid #760001;
+}
+
+
+section {
+	width: 900px;
+	height: 250px;
+	margin: auto;
+	display: flex;
+	margin-top: 100px;
+}
+
+
+
+.panier {
+	width: 900px;
+	height: 100%;
+	margin: auto;
+}
+
+.one {
+	width: 900px;
+	height: 80px;
+	border: 1px solid black;
+	display: flex;
+}
+
+.one p{
+	width: 220px;
+	height: 40px;
+	display: inline-block;
+
+}
+
+.one form{
+	position: absolute ;
+	width: 100px;
+	height: 25px;
+	margin-right: 0;
+	margin-top: 10px;
+}
+
+
+
+
+.fiche {
+	width: 900px;
+	height: 100%;
+	display: flex;
+	margin: auto;
+	border: 1px solid black;
+}
+
+.fiche img{
+	width: 900px;
+	height: 450px;
+}
+
+.categorie {
+	width: 900px;
+	height: 170px;
+	display: flex;
+	/*background-color: blue;*/
+	margin: auto;
+	border: 1px solid black;
+}
+
+
+.product {
+	width: 900px;
+	height: 200px;
+	position: relative;
+	display: flex;
+/*	background-color: red;*/
+
+}
+.product img{
+	width: 255px;
+	height: 170px;
+	
+}
+.product form {
+	display: inline;
+/*	background-color: blue;*/
+margin-left: 30px;
+	margin-top: 70px;
+	height: 70px;
+	width: 200px;
+
+}
+.product input {
+	display: inline;
+	/*background-color: yellow;*/
+
+
+}
+.product h1 {
+	margin:auto;
+/*	background-color: pink;*/
+	height: 30px;
+	width: 150px;
+	margin-top: 70px;
+
+}
+.product p {
+	height: 70px;
+	width: 300px;
+	margin-top: 20px;
+
+}
+#connection {
+	width: 50%;
+	position: relative;
+	/*margin: auto;*/ /* Trouver la solution putain !!*/
+}
+
+#dodo {
+	position: relative;
+	width: 75%;
+	margin: auto;
+}
+#inscription {
+	position: relative;
+	margin-right: 0;
+	width: 50%;
+}
+
+.conne {
+	text-align: center;
+	font-family: Dayrom, serif;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+input {
+	display: block;
+	margin: auto;
+}
+label {
+    display: block;
+    float: left;
+
+}
+
+.ntm {
+	width: 20%;
+	margin: auto;
+}
+
+.ntm img {
+	height: 70px;
+	width: 70px;
+}
+
+
+

@@ -1,0 +1,100 @@
+body {
+    background-color: rgb(80, 80, 80);
+}
+
+.col {
+    background-color: rgb(144, 144, 144);
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px black;
+    width: 120px;
+    height: 450px;
+    text-align: center;
+}
+
+.col img {
+    margin: 3px;
+    position: relative;
+}
+
+#z {
+	border: 5px solid red;
+	border-radius: 5px;
+}
+
+#separation {
+    width: 600px;
+}
+
+.brick {
+    width: 95px;
+    height: 70px;
+    background-image: url(resources/brick.jpg);
+}
+
+#colcenter {
+    background-color: rgb(144, 144, 144);
+    border: 10px solid rgb(144, 144, 144);
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px black;
+    width: 900px;
+}
+
+#scan {
+    border: 2px inset white;
+}
+
+#menu {
+    width: 1300px;
+    height: 120px;
+    background-color: rgb(144, 144, 144);
+    border: 10px solid rgb(144, 144, 144);
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px black;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#menu div {
+    vertical-align: middle;
+    height: 100px;
+    display: inline-block;
+}
+
+#menubox {
+    height: 150px;
+    padding-left: 10px;
+}
+
+#shadow {
+    text-shadow: 6px 3px 3px red;
+}
+
+#container {
+    margin: auto;
+    width: 1250px;
+}
+
+#container div {
+    display: inline-block;
+    vertical-align: top;
+    margin: 13px;
+}
+
+#chat {
+    padding-left: 10px;
+    text-align: left;
+    display: inherit;
+    margin-top: -50px;
+    margin-left: 100px;
+    position: absolute;
+    background-color: rgb(136, 255, 137);
+    width: 500px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+}
+
+#chat input {
+    margin-left: 10px;
+}

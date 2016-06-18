@@ -1,0 +1,66 @@
+<!-- *********************************************************************** -->
+<!--                                                                         -->
+<!--                                                      :::      ::::::::  -->
+<!-- doft.html                                          :+:      :+:    :+:  -->
+<!--                                                  +:+ +:+         +:+    -->
+<!-- By: vquesnel <marvin@42.fr>                    +#+  +:+       +#+       -->
+<!--                                              +#+#+#+#+#+   +#+          -->
+<!-- Created: 2016/06/13 10:56:02 by vquesnel          #+#    #+#            -->
+<!-- Updated: 2016/06/14 14:20:36 by vquesnel         ###   ########.fr      -->
+<!--                                                                         -->
+<!-- *********************************************************************** -->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Day of the 42</title>
+    <link href="doft.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="page">
+        <div id="menu">
+            <div><img src="resources/day_of_the_42.png" alt="Title" height="100px"></div>
+            <div id="separation"></div>
+            <div><img src="resources/loupe.png" alt="Loupe" height="150px"></div>
+            <div id="menubox" align="right">
+                <a href="http://www.disney.com"><img src="resources/reload.png" alt="Recommencer au début" title="Recommencer au début" height="20px"></a>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="http://www.relaischateaux.com"><img src="resources/close.gif" alt="Déconnecter" title="Déconnecter" height="20px"></a>
+            </div>
+        </div>
+        <div id="container">
+            <div class="col">
+                <img src="resources/arrow.png" alt="Avancer" title="Avancer" width="70px">
+                <img src="resources/main.png" alt="Prendre" title="Prendre" width="70px">
+                <img src="resources/oeil.png" id="z" alt="Regarder" title="Regarder" width="70px">
+                <img src="resources/outil.png" alt="Utiliser" title="Utiliser" width="70px">
+                <img src="resources/chat-icon.png" alt="Parler" title="Parler" width="70px">
+            </div>
+            <div id="colcenter"><img src="resources/cluster.jpg" alt="cluster" title="Cluster" width="900px" usemap="#map"></div>
+            <map name="map">
+                <area shape="rect" coords="300,320,350,370" href="http://www.ikea.com" alt="Chaise Ikea" title="Chaise Ikea" />
+                <area shape="rect" coords="710,320,850,370" href="http://www.apple.com" alt="Mac" title="Mac" />
+            </map>
+            <div class="col">
+                <img src="resources/book.png" alt="Book" title="Book" width="70px">
+                <img src="resources/towel.png" alt="Towel" title="Towel" width="70px">
+                <div class="brick" alt="Brick" title="Brick"></div>
+            </div>
+        </div>
+        <div id="chat">
+            <font size="3px" face="verdana"><p>Vous <font size="6px" face="sansserif"<b>entrez</b>
+                </font>alors dans une grande piece remplie d'<span class="ordi" id="shadow">ordinateurs</span>...
+            <br><i>- Bonjour, vous êtes nouveau ici ?</i><span class="little-height">
+                <input type="text" size="50" id="scan"><input type="submit" value="Repondre">
+            </div>
+        </div>
+    </body>
+</html>

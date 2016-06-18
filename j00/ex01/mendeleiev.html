@@ -1,0 +1,225 @@
+<!-- *********************************************************************** -->
+<!--                                                                         -->
+<!--                                                      :::      ::::::::  -->
+<!-- mendeleiev.html                                    :+:      :+:    :+:  -->
+<!--                                                  +:+ +:+         +:+    -->
+<!-- By: vquesnel <marvin@42.fr>                    +#+  +:+       +#+       -->
+<!--                                              +#+#+#+#+#+   +#+          -->
+<!-- Created: 2016/06/13 10:55:44 by vquesnel          #+#    #+#            -->
+<!-- Updated: 2016/06/13 10:55:45 by vquesnel         ###   ########.fr      -->
+<!--                                                                         -->
+<!-- *********************************************************************** -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>Responsive Mendeleiev</title>
+        <style>
+            body {
+            font-family: arial;
+            background-image: url("http://img1.gtsstatic.com/wallpapers/89d1bc596394126aadd72dc865024821_large.jpeg");
+            }
+            h1 {
+                color: white;
+                font-size: 60px;
+                text-align: center;
+                background-color: black;
+                padding-top: 10px;
+                padding-bottom: 20px;
+                border: 3px solid white;
+            }
+            .separator{
+                width: 100%;
+                height: 40px;
+            }
+            table {
+                width: 90%;
+                border-colapse: collapse;
+            }
+            .cell {
+                border: 1px solid black;
+                color: darkblue;
+                background-color: palegreen;
+                text-align: center;
+                font-size: 3vw;
+            }
+            td {
+                width: 4%;
+            }
+            #logo {
+                text-align: center;
+                padding-top: 60 px;
+            }
+            #weight {
+                font-size: 0.8vw;
+                font-weight: 400;
+                text-align: right;
+                color: white;
+                padding: 4px;
+                background-color: coral;
+            }
+            #na {
+                font-size: 0.9vw;
+                text-align: left;
+                padding: 4px;
+            }
+            #tab {
+                display: inline-block;
+            }
+        </style>
+</head>
+<body bgcolor>
+    <div class="separator"></div>
+    <h1>Tableau Périodique des Élements</h1>
+    <div class="separator"></div>
+    <table align="center" contenteditable="true">
+        <tr>
+                <td><div class="cell"><div id="weight">1,007</div>H<div id="na">1</div></div></td>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td><div class="cell"><div id="weight">4,002</div>He<div id="na">2</div></div></td>
+            </tr>
+            <tr>
+                <td><div class="cell"><div id="weight">6,941</div>Li<div id="na">3</div></div></td>
+                <td><div class="cell"><div id="weight">9,012</div>Be<div id="na">4</div></div></td>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td><div class="cell"><div id="weight">10,811</div>B<div id="na">5</div></div></td>
+                <td><div class="cell"><div id="weight">12,010</div>C<div id="na">6</div></div></td>
+                <td><div class="cell"><div id="weight">14,006</div>N<div id="na">7</div></div></td>
+                <td><div class="cell"><div id="weight">15,999</div>O<div id="na">8</div></div></td>
+                <td><div class="cell"><div id="weight">18,998</div>F<div id="na">9</div></div></td>
+                <td><div class="cell"><div id="weight">20,179</div>Ne<div id="na">10</div></div></td>
+            </tr>
+            <tr>
+                <td><div class="cell"><div id="weight">22,989</div>Na<div id="na">11</div></div></td>
+                <td><div class="cell"><div id="weight">24,305</div>Mg<div id="na">12</div></div></td>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td><div class="cell"><div id="weight">26,981</div>Al<div id="na">13</div></div></td>
+                <td><div class="cell"><div id="weight">28,085</div>Si<div id="na">14</div></div></td>
+                <td><div class="cell"><div id="weight">30,973</div>P<div id="na">15</div></div></td>
+                <td><div class="cell"><div id="weight">32,065</div>S<div id="na">16</div></div></td>
+                <td><div class="cell"><div id="weight">35,453</div>Cl<div id="na">17</div></div></td>
+                <td><div class="cell"><div id="weight">39,948</div>Ar<div id="na">18</div></div></td>
+            </tr>
+            <tr>
+                <td><div class="cell"><div id="weight">39,098</div>K<div id="na">19</div></div></td>
+                <td><div class="cell"><div id="weight">40,078</div>Ca<div id="na">20</div></div></td>
+                <td><div class="cell"><div id="weight">44,955</div>Sc<div id="na">21</div></div></td>
+                <td><div class="cell"><div id="weight">47,867</div>Ti<div id="na">22</div></div></td>
+                <td><div class="cell"><div id="weight">50,941</div>V<div id="na">23</div></div></td>
+                <td><div class="cell"><div id="weight">51,996</div>Cr<div id="na">24</div></div></td>
+                <td><div class="cell"><div id="weight">54,938</div>Mn<div id="na">25</div></div></td>
+                <td><div class="cell"><div id="weight">55,845</div>Fe<div id="na">26</div></div></td>
+                <td><div class="cell"><div id="weight">58,993</div>Co<div id="na">27</div></div></td>
+                <td><div class="cell"><div id="weight">58,693</div>Vi<div id="na">28</div></div></td>
+                <td><div class="cell"><div id="weight">63,546</div>Cu<div id="na">29</div></div></td>
+                <td><div class="cell"><div id="weight">65,38</div>Zn<div id="na">30</div></div></td>
+                <td><div class="cell"><div id="weight">69,723</div>Ga<div id="na">31</div></div></td>
+                <td><div class="cell"><div id="weight">72,63</div>Ge<div id="na">32</div></div></td>
+                <td><div class="cell"><div id="weight">74,921</div>As<div id="na">33</div></div></td>
+                <td><div class="cell"><div id="weight">78,96</div>Se<div id="na">34</div></div></td>
+                <td><div class="cell"><div id="weight">79,904</div>Br<div id="na">35</div></div></td>
+                <td><div class="cell"><div id="weight">83,789</div>Kr<div id="na">36</div></div></td>
+            </tr>
+            <tr>
+                <td><div class="cell"><div id="weight">85,467</div>Rb<div id="na">37</div></div></td>
+                <td><div class="cell"><div id="weight">87,62</div>Sr<div id="na">38</div></div></td>
+                <td><div class="cell"><div id="weight">88,905</div>Y<div id="na">39</div></div></td>
+                <td><div class="cell"><div id="weight">91,22</div>Zr<div id="na">40</div></div></td>
+                <td><div class="cell"><div id="weight">92,906</div>Nb<div id="na">41</div></div></td>
+                <td><div class="cell"><div id="weight">95,96</div>Mc<div id="na">42</div></div></td>
+                <td><div class="cell"><div id="weight">98</div>Tc<div id="na">43</div></div></td>
+                <td><div class="cell"><div id="weight">101</div>Ru<div id="na">44</div></div></td>
+                <td><div class="cell"><div id="weight">102,90</div>Rh<div id="na">45</div></div></td>
+                <td><div class="cell"><div id="weight">106,42</div>Pd<div id="na">46</div></div></td>
+                <td><div class="cell"><div id="weight">107,87</div>Ag<div id="na">47</div></div></td>
+                <td><div class="cell"><div id="weight">112,41</div>Cd<div id="na">47</div></div></td>
+                <td><div class="cell"><div id="weight">114,82</div>In<div id="na">49</div></div></td>
+                <td><div class="cell"><div id="weight">118,71</div>Sn<div id="na">50</div></div></td>
+                <td><div class="cell"><div id="weight">121,76</div>Sb<div id="na">51</div></div></td>
+                <td><div class="cell"><div id="weight">127,6</div>Te<div id="na">52</div></div></td>
+                <td><div class="cell"><div id="weight">126,9</div>I<div id="na">53</div></div></td>
+                <td><div class="cell"><div id="weight">131,29</div>Xe<div id="na">54</div></div></td>
+            </tr>
+        <tr>
+               <td><div class="cell"><div id="weight">132,90</div>Cs<div id="na">55</div></div></td>
+                <td><div class="cell"><div id="weight">137,32</div>Ba<div id="na">56</div></div></td>
+                <td><div class="cell"><div id="weight">57 - 71</div>...</div></td>
+                <td><div class="cell"><div id="weight">178,49</div>Hf<div id="na">72</div></div></td>
+                <td><div class="cell"><div id="weight">180,49</div>Ta<div id="na">73</div></div></td>
+                <td><div class="cell"><div id="weight">183,84</div>W<div id="na">74</div></div></td>
+                <td><div class="cell"><div id="weight">186,20</div>Re<div id="na">75</div></div></td>
+                <td><div class="cell"><div id="weight">190,23</div>Os<div id="na">76</div></div></td>
+                <td><div class="cell"><div id="weight">192,21</div>Ir<div id="na">77</div></div></td>
+                <td><div class="cell"><div id="weight">195,08</div>Pt<div id="na">78</div></div></td>
+                <td><div class="cell"><div id="weight">196,96</div>Au<div id="na">79</div></div></td>
+                <td><div class="cell"><div id="weight">200,59</div>Hg<div id="na">80</div></div></td>
+                <td><div class="cell"><div id="weight">204,38</div>Tl<div id="na">81</div></div></td>
+                <td><div class="cell"><div id="weight">207,2</div>Pb<div id="na">82</div></div></td>
+                <td><div class="cell"><div id="weight">208,98</div>Bi<div id="na">83</div></div></td>
+                <td><div class="cell"><div id="weight">209</div>Po<div id="na">84</div></div></td>
+                <td><div class="cell"><div id="weight">210</div>At<div id="na">85</div></div></td>
+                <td><div class="cell"><div id="weight">222</div>Rn<div id="na">86</div></div></td>
+            </tr>
+            <tr>
+                <td><div class="cell"><div id="weight">223</div>Fr<div id="na">87</div></div></td>
+                <td><div class="cell"><div id="weight">226</div>Ra<div id="na">88</div></div></td>
+               <td><div class="cell"><div id="weight">227 - 262</div>...</div></td>
+                <td><div class="cell"><div id="weight">267</div>Rf<div id="na">104</div></div></td>
+                <td><div class="cell"><div id="weight">268</div>Db<div id="na">105</div></div></td>
+                <td><div class="cell"><div id="weight">271</div>Sg<div id="na">106</div></div></td>
+                <td><div class="cell"><div id="weight">272</div>Bh<div id="na">107</div></div></td>
+                <td><div class="cell"><div id="weight">270</div>Hs<div id="na">108</div></div></td>
+                <td><div class="cell"><div id="weight">276</div>Mt<div id="na">109</div></div></td>
+                <td><div class="cell"><div id="weight">281</div>Ds<div id="na">110</div></div></td>
+                <td><div class="cell"><div id="weight">280</div>Rg<div id="na">111</div></div></td>
+                <td><div class="cell"><div id="weight">285</div>Cn<div id="na">112</div></div></td>
+                <td><div class="cell"><div id="weight">284</div>Uut<div id="na">113</div></div></td>
+                <td><div class="cell"><div id="weight">289</div>Fl<div id="na">114</div></div></td>
+                <td><div class="cell"><div id="weight">288</div>Uup<div id="na">115</div></div></td>
+                <td><div class="cell"><div id="weight">293</div>Lv<div id="na">116</div></div></td>
+                <td><div class="cell"><div id="weight">294</div>Uus<div id="na">117</div></div></td>
+                <td><div class="cell"><div id="weight">294</div>Uuo<div id="na">118</div></div></td>
+            </tr>
+        </table>
+        <div class="separator"></div>
+        <table align="center" contenteditable="true">
+            <tr>
+                <td></td><td></td><td></td>
+                <td><div class="cell"><div id="weight">138,9</div>La<div id="na">57<div></div></td>
+                <td><div class="cell"><div id="weight">140,11</div>Ce<div id="na">58</div></div></td>
+                <td><div class="cell"><div id="weight">140,9</div>Pr<div id="na">59</div></div></td>
+                <td><div class="cell"><div id="weight">144,24</div>Nd<div id="na">60</div></div></td>
+                <td><div class="cell"><div id="weight">145</div>Pm<div id="na">61</div></div></td>
+                <td><div class="cell"><div id="weight">150,36</div>Sm<div id="na">62</div></div></td>
+                <td><div class="cell"><div id="weight">151,964</div>Eu<div id="na">63</div></div></td>
+                <td><div class="cell"><div id="weight">157,25</div>Gd<div id="na">64</div></div></td>
+                <td><div class="cell"><div id="weight">158,92</div>Td<div id="na">65</div></div></td>
+                <td><div class="cell"><div id="weight">162,5</div>Dy<div id="na">66</div></div></td>
+                <td><div class="cell"><div id="weight">164,93</div>Ho<div id="na">67</div></div></td>
+                <td><div class="cell"><div id="weight">167,25</div>Er<div id="na">68</div></div></td>
+                <td><div class="cell"><div id="weight">168,93</div>Tm<div id="na">69</div></div></td>
+                <td><div class="cell"><div id="weight">173,05</div>Yb<div id="na">70</div></div></td>
+                <td><div class="cell"><div id="weight">174,97</div>Lu<div id="na">71</div></div></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td>
+                <td><div class="cell"><div id="weight">227</div>Ac<div id="na">89</div></div></td>
+                <td><div class="cell"><div id="weight">232,03</div>Th<div id="na">90</div></div></td>
+                <td><div class="cell"><div id="weight">231,03</div>Pa<div id="na">91</div></div></td>
+                <td><div class="cell"><div id="weight">238,02</div>U<div id="na">92</div></div></td>
+                <td><div class="cell"><div id="weight">237</div>Np<div id="na">93</div></div></td>
+                <td><div class="cell"><div id="weight">244</div>Pu<div id="na">94</div></div></td>
+                <td><div class="cell"><div id="weight">243</div>Am<div id="na">95</div></div></td>
+                <td><div class="cell"><div id="weight">247</div>Cm<div id="na">96</div></div></td>
+                <td><div class="cell"><div id="weight">247</div>Bk<div id="na">97</div></div></td>
+                <td><div class="cell"><div id="weight">251</div>Cf<div id="na">98</div></div></td>
+                <td><div class="cell"><div id="weight">252</div>Es<div id="na">99</div></div></td>
+                <td><div class="cell"><div id="weight">257</div>Fm<div id="na">100</div></div></td>
+                <td><div class="cell"><div id="weight">258</div>Md<div id="na">101</div></div></td>
+                <td><div class="cell"><div id="weight">259</div>No<div id="na">102</div></div></td>
+                <td><div class="cell"><div id="weight">262</div>Lr<div id="na">103</div></div></td>
+            </tr>
+        </table>
+    </body>
+</html>
