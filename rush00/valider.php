@@ -1,6 +1,16 @@
 <?PHP
 session_start();
 include ('recup_info.php');
+$tmp =empty($_SESSION['log']);
+echo $tmp."\n";
+echo empty($_COOKIE['id'])."\n";
+if (!isset($_SESSION['log']) || !isset($_COOKIE["id"]))
+{
+	include ('connection.php');
+	header("./connection.php");
+	exit();
+}
+
 // $_POST['ville'] ontient la ville que lon chercher
 
 /*
@@ -40,13 +50,8 @@ ON LES RENVOIE SUR LA PAGE DE CONNECTION QUI LLE LES RENVERRA ICI GRACE AU VARIA
 					<li><a href="promo.php">Promo</a></li>
 					<li><a href="panier.php">Panier</a></li>
 					<?PHP
-						if ($_SESSION['log'] == 'YES' || $_COOKIE["id"] !== NULL)
-						{
 							echo '<li><a href="compte.php">Mon compte</a></li>';
 							echo '<li><a href="delog.php">Deconnection</a></li>';
-						}
-						else
-							echo '<li><a href="connection.php">Connection / inscription</a></li>';
 					?>
 				</ul>
 			</nav>
