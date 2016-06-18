@@ -69,8 +69,8 @@ if (!empty($_SESSION['login']))
 				echo '<p style="width:150px">Prix total : '.(calcule_prix($r32[$i]['ville']) * $r32[$i]['passager']).'</p>';
 				echo '<form method="post" action="valider.php">';
 				echo '<input type="hidden" name="ville" value='.$r32[$i]['ville'].'>';
-				echo '<input style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 50px;height: 50px "type="submit" name="submite" value="Payer">';
-		echo '<input style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 50px;height: 50px "type="submit" name="submit" value="Annuler">';
+				echo '<input class="bouton" style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 50px;height: 50px "type="submit" name="submite" value="Payer">';
+				echo '<input class="bouton" style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 50px;height: 50px "type="submit" name="submit" value="Annuler">';
 				echo '</form>';
 				echo '</div>';
 				echo '<br />';
@@ -85,7 +85,7 @@ else
 	while ($_SESSION['panier'][$i] !== NULL)
 	{
 		$prix = $prix + calcule_prix($_SESSION['panier'][$i]['ville']) * $_SESSION['panier'][$i]['passager'];
-		echo '<div class="one" id="payer">';
+		echo '<div class="one">';
 		echo '<p style="width:200px"> Destination : '.$_SESSION['panier'][$i]['ville'].'</p><br />';
 
 		echo '<p>Date de départ : '.$_SESSION['panier'][$i]['depart'].'<br />';
@@ -94,9 +94,9 @@ else
 		echo '<p>Nombre de passager : '.$_SESSION['panier'][$i]['passager'].'</p>';
 		echo '<p style="width:150px">Prix total : '.(calcule_prix( $_SESSION['panier'][$i]['ville']) * $_SESSION['panier'][$i]['passager']).'</p>';
 		echo '<form method="post" action="valider.php">';
-
 		echo '<input type="hidden" name="ville" value='.$_SESSION['panier'][$i]['ville'].'>';
-		echo '<input style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 50px;height: 50px "type="submit" name="submit" value="Annuler">';
+		echo '<input class="bouton" style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 50px;height: 50px "type="submit" name="submite" value="Payer">';
+		echo '<input class="bouton" style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 50px;height: 50px "type="submit" name="submit" value="Annuler">';
 		echo '</form>';
 		echo '</div>';
 		echo '<br />';
@@ -109,7 +109,7 @@ else
 </hr>
 	<form method="post" action="valider.php">
 		<div id="payer" align="center">
-			<div><p> Prix Total des Voyages selectionnés : <?PHP echo $prix ?></p></div>
+			<div><p> Prix Total des Voyages selectionnés : <?PHP echo $prix." $" ?></p></div>
 		<div><input style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 50px;height: 50px "type="submit" name="submit" value="Payer"></div>
 		<div><input style="border-radius: 3px; border-style: solid; background-color: rgb(239,238,238);width: 50px;height: 50px "type="submit" name="submit" value="Annuler"></div>
 		</div>

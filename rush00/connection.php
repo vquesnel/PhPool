@@ -29,7 +29,6 @@ require('captcha.php');
 				<ul>
 					<li><a href="index.php">Accueil</a></li>
 					<li><a href="derniereminute.php">Dernière minute</a></li>
-					<li><a href="sejour.php">Séjour</a></li>
 					<li><a href="promo.php">Promo</a></li>
 				</ul>
 			</nav>

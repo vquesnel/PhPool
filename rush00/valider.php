@@ -1,9 +1,6 @@
 <?PHP
 session_start();
 include ('recup_info.php');
-$tmp =empty($_SESSION['log']);
-echo $tmp."\n";
-echo empty($_COOKIE['id'])."\n";
 if (!isset($_SESSION['log']) || !isset($_COOKIE["id"]))
 {
 	include ('connection.php');
