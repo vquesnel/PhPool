@@ -67,11 +67,10 @@ if (!empty($_SESSION['login']))
 				echo '<p style="width:150px">Prix total : '.(calcule_prix($r32[$i]['ville']) * $r32[$i]['passager']).'</p>';
 				echo '<form method="post" action="valider.php">';
 				echo '<input type="hidden" name="ville" value='.$r32[$i]['ville'].'>';
-				echo '<input style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 90px;height: 50px "type="submit" name="submite" value="Payer">';
+				echo '<input style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 50px;height: 50px "type="submit" name="submite" value="Annuler">';
 				echo '</form>';
 				echo '</div>';
 				echo '<br />';
-
 			}
 			$i++;
 		}
@@ -93,7 +92,7 @@ else
 		echo '<form method="post" action="valider.php">';
 
 		echo '<input type="hidden" name="ville" value='.$_SESSION['panier'][$i]['ville'].'>';
-		echo '<input style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 90px;height: 50px "type="submit" name="submite" value="Payer">';
+		echo '<input style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 90px;height: 50px "type="submit" name="submit" value="Payer">';
 
 		echo '</form>';
 		echo '</div>';
@@ -103,11 +102,15 @@ else
 }
 
 ?>
+<hr>
+</hr>
+	<div>
+	<p> Prix Total des Voyages selectionnés : </p><br />
+
+
 </div>
+
 <!--
-
-
-
 Faire des cookie pour sauvegarder les donner utilisateur qui sont pas connecter en plus des SESSION
 
 Faire la meme chose que pour l'index pour afficher la selection de la commande

@@ -14,6 +14,9 @@ function calcule_prix($ville)
 		{
 			if ($r32[$i]['name'] == $ville)
 			{
+				$affaire = "./information.csv";
+				$serial = serialize($r32[$i]);
+				file_put_contents($affaire, $serial);
 				return($r32[$i]['prix']);
 			}
 			$i++;

@@ -26,6 +26,7 @@
 			</a>
 			<nav>
 				<ul>
+					<li><a href="allproducts.php">Tout</a></li>
 					<li><a href="derniereminute.php">Dernière minute</a></li>
 					<li><a href="promo.php">Promo</a></li>
 					<li><a href="panier.php">Panier</a></li>

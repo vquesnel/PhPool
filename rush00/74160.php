@@ -61,9 +61,9 @@ foreach ($tab as $elem)
 		<br />
 		<p>Chiffre d'affaire total :</p>
 		<br />
-		<p>Panier moyen :</p>
+		<p>Panier moyen : <?PHP $var = nbr_product() / nbr_categorie(); echo $var ?></p>
 		<br />
-		<p>Nombre de commande passer sur le site :</p>
+		<p>Nombre de commande passer sur le site: </p>
 		<br />
 	</div>
 
