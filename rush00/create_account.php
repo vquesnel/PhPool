@@ -127,7 +127,7 @@ if ($_POST['submite'] == 'Inscription')
 							{
 								$i = 0;
 								$pasword = hash('whirlpool', $_POST['new_passwd']);
-								$tab = array('login' => $_POST['new_login'], 'passwd' => $pasword, 'date' => $_POST['date'], 'mail' => $_POST['mail'], 'admin' => 1);
+								$tab = array('login' => $_POST['new_login'], 'passwd' => $pasword, 'date' => $_POST['date'], 'mail' => $_POST['mail'], 'admin' => 0);
 								if (file_exists("./private") === FALSE)
 									mkdir("./private");
 								$add = './private/passwd';
@@ -158,22 +158,29 @@ if ($_POST['submite'] == 'Inscription')
 								if ($_SESSION['ajout'] == 1)
 								{
 									$i = 0;
-									$add = './commande.csv';
-									file_put_contents($add, "", FILE_APPEND);
-									if (file_get_contents($add) != FALSE)
+									$toto = './commande.csv';
+									file_put_contents($toto, "", FILE_APPEND);
+									if (file_get_contents($toto) != FALSE)
 									{
-										$r32 = unserialize(file_get_contents($add));
+										$r11 = unserialize(file_get_contents($toto));
 										while ($_SESSION['panier'][$i] != null)
 										{
-											$tab = array('login' => $_POST['login'] , 'ville' => $_SESSION['panier'][$i]['ville'], 'passager' => $_SESSION['panier'][$i]['passager'], 'depart' => $_SESSION['panier'][$i]['depart'], 'retour' => $_SESSION['panier'][$i]['retour']);
-											$r32 []= $tab;
+											$tab = array('login' => $_POST['new_login'] , 'ville' => $_SESSION['panier'][$i]['ville'], 'passager' => $_SESSION['panier'][$i]['passager'], 'depart' => $_SESSION['panier'][$i]['depart'], 'retour' => $_SESSION['panier'][$i]['retour']);
+											$r11[]= $tab;
 											$i++;
 										}
 									}
 									else
-										$r32 = array($tab);
-									$titi = serialize($r32);
-									file_put_contents($add, $titi);
+									{
+										while ($_SESSION['panier'][$i] != null)
+										{
+											$tab = array('login' => $_POST['new_login'] , 'ville' => $_SESSION['panier'][$i]['ville'], 'passager' => $_SESSION['panier'][$i]['passager'], 'depart' => $_SESSION['panier'][$i]['depart'], 'retour' => $_SESSION['panier'][$i]['retour']);
+											$r11[]= $tab;
+											$i++;
+										}
+									}
+									$titi = serialize($r11);
+									file_put_contents($toto, $titi);
 								}
 							}
 							else
