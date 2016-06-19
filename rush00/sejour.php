@@ -67,7 +67,6 @@ if (!empty($_SESSION['login']))
 				echo '<p style="width:150px">Prix total : '.(calcule_prix($r32[$i]['ville']) * $r32[$i]['passager']).'</p>';
 				echo '<form method="post" action="valider.php">';
 				echo '<input type="hidden" name="ville" value='.$r32[$i]['ville'].'>';
-				echo '<input style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 90px;height: 50px "type="submit" name="submite" value="Payer">';
 				echo '</form>';
 				echo '</div>';
 				echo '<br />';

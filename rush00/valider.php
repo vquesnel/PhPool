@@ -1,11 +1,85 @@
 <?PHP
 session_start();
 include ('recup_info.php');
-if (!isset($_SESSION['log']) || !isset($_COOKIE["id"]))
+
+if (!isset($_SESSION['login']) || !isset($_COOKIE["id"]))
 {
-	include ('connection.php');
-	header("./connection.php");
-	exit();
+	$tab = $_SESSION['panier'];
+	if ($_POST['submit'] == "Annuler")
+	{
+		$ville = $_POST["ville"];
+		$i = 0;
+		while ($tab[$i] != null)
+		{
+			if ($tab[$i]['ville'] == $ville)
+			{
+				unset($tab[$i]);
+				$tab = array_values($tab);
+			}
+			$i++;
+		}
+		unset ($_SESSION['panier']);
+		$_SESSION['panier'] = $tab;
+		header("Location:panier.php");
+		exit();
+	}
+	else if ($_POST['submit'] == "Payer")
+	{
+		$_SESSION['ajout'] = 1;
+		header("Location:connection.php");
+		exit();
+	}
+	else if ($_POST['submit'] == "Annulertout")
+	{
+		unset($_SESSION['panier']);
+		header("Location:panier.php");
+		exit();
+	}
+}
+if ($_POST['submit'] == "Annuler")
+{
+	if (!empty($_SESSION['login']))
+	{
+		$ville = $_POST["ville"];
+		$add = './commande.csv';
+		file_put_contents($add, "", FILE_APPEND);
+		$serial = unserialize(file_get_contents($add));
+		$i = 0;
+		while ($serial[$i])
+		{
+			if ($serial[$i]['login'] == $_SESSION['login'] && $serial[$i]["ville"] == $ville)
+			{
+				unset($serial[$i]);
+				$serial = array_values($serial);
+			}
+			$i++;
+		}
+		$toto = serialize($serial);
+		file_put_contents($add, $toto);
+		header("Location:panier.php");
+		exit();
+	}
+}
+if ($_POST['submit'] == "Annulertout")
+{
+	if (!empty($_SESSION['login']))
+	{
+		$add = './commande.csv';
+		file_put_contents($add, "", FILE_APPEND);
+		$serial = unserialize(file_get_contents($add));
+		$i = 0;
+		while ($serial[$i])
+		{
+			if ($serial[$i]['login'] == $_SESSION['login'])
+				unset($serial[$i]);
+			$i++;
+		}
+		$serial = array_values($serial);
+		$toto = serialize($serial);
+		file_put_contents($add, $toto);
+		header("Location:panier.php");
+		exit();
+	}
 }
 
 // $_POST['ville'] ontient la ville que lon chercher
@@ -18,7 +92,7 @@ IL NE PEUVENT PAS VENIR SUR CETTE PAGE SI IL NE SONT PAS CONNECTER
 
 ON LES RENVOIE SUR LA PAGE DE CONNECTION QUI LLE LES RENVERRA ICI GRACE AU VARIABLE DE _POST
 
-*/
+ */
 ?>
 <!DOCTYPE html>
 <html>
@@ -46,13 +120,12 @@ ON LES RENVOIE SUR LA PAGE DE CONNECTION QUI LLE LES RENVERRA ICI GRACE AU VARIA
 					<li><a href="derniereminute.php">Dernière minute</a></li>
 					<li><a href="promo.php">Promo</a></li>
 					<li><a href="panier.php">Panier</a></li>
-					<?PHP
-							echo '<li><a href="compte.php">Mon compte</a></li>';
-							echo '<li><a href="delog.php">Deconnection</a></li>';
-					?>
+<?PHP
+echo '<li><a href="compte.php">Mon compte</a></li>';
+echo '<li><a href="delog.php">Deconnection</a></li>';
+?>
 				</ul>
 			</nav>
-
 		</header>
 	</div>
 <hr color="black"/>
@@ -64,12 +137,6 @@ ON LES RENVOIE SUR LA PAGE DE CONNECTION QUI LLE LES RENVERRA ICI GRACE AU VARIA
 		<p><?PHP  echo descc($_POST['ville']) ?></p>
 	</div>
 </div>
-
-
-
-
-
-
 
 
 

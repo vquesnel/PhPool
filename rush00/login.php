@@ -51,6 +51,4 @@ if ($_POST['submit'] == 'Enter')
 		exit();
 	}
 }
-
 ?>
-
