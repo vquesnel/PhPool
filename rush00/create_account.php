@@ -155,33 +155,6 @@ if ($_POST['submite'] == 'Inscription')
 								}
 								else
 									echo '<div class="ntm"><p><img src="img/attention.png" alt="Logo attention">Login déjà existant</p></div>';
-								if ($_SESSION['ajout'] == 1)
-								{
-									$i = 0;
-									$toto = './commande.csv';
-									file_put_contents($toto, "", FILE_APPEND);
-									if (file_get_contents($toto) != FALSE)
-									{
-										$r11 = unserialize(file_get_contents($toto));
-										while ($_SESSION['panier'][$i] != null)
-										{
-											$tab = array('login' => $_POST['new_login'] , 'ville' => $_SESSION['panier'][$i]['ville'], 'passager' => $_SESSION['panier'][$i]['passager'], 'depart' => $_SESSION['panier'][$i]['depart'], 'retour' => $_SESSION['panier'][$i]['retour']);
-											$r11[]= $tab;
-											$i++;
-										}
-									}
-									else
-									{
-										while ($_SESSION['panier'][$i] != null)
-										{
-											$tab = array('login' => $_POST['new_login'] , 'ville' => $_SESSION['panier'][$i]['ville'], 'passager' => $_SESSION['panier'][$i]['passager'], 'depart' => $_SESSION['panier'][$i]['depart'], 'retour' => $_SESSION['panier'][$i]['retour']);
-											$r11[]= $tab;
-											$i++;
-										}
-									}
-									$titi = serialize($r11);
-									file_put_contents($toto, $titi);
-								}
 							}
 							else
 								echo '<div class="ntm"><p><img src="img/attention.png" alt="Logo attention">Mot de passe trop faible</p></div>';
