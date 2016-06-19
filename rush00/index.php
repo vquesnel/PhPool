@@ -62,7 +62,7 @@
 			echo "<p> ".$r32[$i]['desc']."</p>";
 			echo'<form action="pagetest.php" method="post">';
 			echo'<select name="Ville">';
-			echo'<option value=""> ----- Ville ----- </option>';
+		/*	echo'<option value=""> ----- Ville ----- </option>';*/
 			$adds = './product.csv';
 			file_put_contents($adds, "", FILE_APPEND);
 			if (file_get_contents($adds) != FALSE)

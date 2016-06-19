@@ -2,7 +2,7 @@
 session_start();
 include ('nbr_login.php');
 include ('nbr_categorie.php');
-
+include ('total_vente.php');
 $add = './private/passwd';
 $tab = unserialize(file_get_contents($add));
 foreach ($tab as $elem)
@@ -39,7 +39,7 @@ foreach ($tab as $elem)
 			</a>
 			<nav>
 				<ul>
-					<li><a href="index.php">Accueil</a></li>
+					<li><a href="sejour.php">Séjour</a></li>
 					<li><a href="74161.php">Produits</a></li>
 					<li><a href="74162.php">Catégories</a></li>
 					<li><a href="74163.php">Utilisateurs</a></li>
@@ -58,11 +58,11 @@ foreach ($tab as $elem)
 		<br />
 		<p>Nombre d'utilisateurs : <?PHP echo nbr_login() ?></p>
 		<br />
-		<p>Chiffre d'affaire total :</p>
+		<p>Chiffre d'affaire total :  <?PHP if(!total_vente()) echo "0"; else echo total_vente() ?> $</p>
 		<br />
-		<p>Panier moyen : <?PHP $var = nbr_product() / nbr_categorie(); echo $var ?></p>
+		<p>Panier moyen : <?PHP if (!total_commande()) echo "0"; else $var = total_vente() / total_commande(); echo $var ?> $</p>
 		<br />
-		<p>Nombre de commande passer sur le site: </p>
+		<p>Nombre de commande total: <?PHP if (!total_commande()) echo "0"; else echo total_commande() ?></p>
 		<br />
 	</div>
 

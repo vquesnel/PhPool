@@ -68,6 +68,11 @@ if (!empty($_SESSION['login']))
 				echo '<p>Nombre de passager : '.$r32[$i]['passager'].'</p>';
 				echo '<p style="width:150px">Prix total : '.(calcule_prix($r32[$i]['ville']) * $r32[$i]['passager']).'</p>';
 				echo '<form method="post" action="valider.php">';
+
+				echo '<input type="hidden" name="depart" value='.$r32[$i]['depart'].'>';
+				echo '<input type="hidden" name="arriver" value='.$r32[$i]['retour'].'>';
+
+				echo '<input type="hidden" name="nbr" value='.$r32[$i]['passager'].'>';
 				echo '<input type="hidden" name="ville" value='.$r32[$i]['ville'].'>';
 				echo '<input class="bouton" style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 50px;height: 50px "type="submit" name="submit" value="Payer">';
 				echo '<input class="bouton" style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 50px;height: 50px "type="submit" name="submit" value="Annuler">';
@@ -94,7 +99,8 @@ else
 		echo '<p>Nombre de passager : '.$_SESSION['panier'][$i]['passager'].'</p>';
 		echo '<p style="width:150px">Prix total : '.(calcule_prix( $_SESSION['panier'][$i]['ville']) * $_SESSION['panier'][$i]['passager']).'</p>';
 		echo '<form method="post" action="valider.php">';
-
+		$i = calcule_prix( $_SESSION['panier'][$i]['ville']) * $_SESSION['panier'][$i]['passager'];
+		echo '<input type="hidden" name="nbr" value='.$r32[$i]['passager'].'>';
 		echo '<input type="hidden" name="ville" value='.$_SESSION['panier'][$i]['ville'].'>';
 		echo '<input class="bouton" style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 50px;height: 50px "type="submit" name="submit" value="Payer">';
 		echo '<input class="bouton" style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 50px;height: 50px "type="submit" name="submit" value="Annuler">';

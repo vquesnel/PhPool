@@ -106,7 +106,7 @@ foreach ($tab as $elem)
 				<tr><td>&nbsp</td></tr>
 
 				<tr>
-					<td><label for="name">Nom de la catégorie :</label></td>
+					<td><label for="name">Nom du produit :</label></td>
 					<td><input type="text" name="name" /></td>
 				</tr>
 				<tr><td>&nbsp</td></tr>
@@ -130,7 +130,7 @@ foreach ($tab as $elem)
 					<td><input type="text" name="name" /></td>
 				</tr>
 				<tr>
-					<td><label for="name">Chnger le nom du produit :</label></td>
+					<td><label for="name">Changer le nom du produit :</label></td>
 					<td><input type="text" name="new_name" /></td>
 				</tr>
 				<tr>

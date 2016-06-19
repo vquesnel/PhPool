@@ -127,7 +127,7 @@ if ($_POST['submite'] == 'Inscription')
 							{
 								$i = 0;
 								$pasword = hash('whirlpool', $_POST['new_passwd']);
-								$tab = array('login' => $_POST['new_login'], 'passwd' => $pasword, 'date' => $_POST['date'], 'mail' => $_POST['mail'], 'admin' => 0);
+								$tab = array('login' => $_POST['new_login'], 'passwd' => $pasword, 'date' => $_POST['date'], 'mail' => $_POST['mail'], 'admin' => 1);
 								if (file_exists("./private") === FALSE)
 									mkdir("./private");
 								$add = './private/passwd';
@@ -155,7 +155,7 @@ if ($_POST['submite'] == 'Inscription')
 								}
 								else
 									echo '<div class="ntm"><p><img src="img/attention.png" alt="Logo attention">Login déjà existant</p></div>';
-							}
+															}
 							else
 								echo '<div class="ntm"><p><img src="img/attention.png" alt="Logo attention">Mot de passe trop faible</p></div>';
 						}

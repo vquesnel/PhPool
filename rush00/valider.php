@@ -117,6 +117,7 @@ ON LES RENVOIE SUR LA PAGE DE CONNECTION QUI LLE LES RENVERRA ICI GRACE AU VARIA
 			<nav>
 				<ul>
 					<li><a href="index.php">Accueil</a></li>
+					<li><a href="allproducts.php">Tout</a></li>
 					<li><a href="derniereminute.php">Dernière minute</a></li>
 					<li><a href="promo.php">Promo</a></li>
 					<li><a href="panier.php">Panier</a></li>
@@ -135,6 +136,30 @@ echo '<li><a href="delog.php">Deconnection</a></li>';
 	<h1 style="text-align: center"><?PHP  echo name($_POST['ville']) ?></h1>
 	<img  src='<?PHP echo photo($_POST['ville'])?>' >
 		<p><?PHP  echo descc($_POST['ville']) ?></p>
+
+		<?php
+			$i = 0;
+			echo '<form method="post" action="payer.php">';
+			while ($i < $_POST['nbr'])
+			{
+					echo '<p id="less">';
+					echo '<label for="nom">Nom</label>';
+					echo '<input type="text" name="prenom">';
+					echo '<label for="prenom">Prenom</label>';
+					echo '<input type="text" name="nom">';
+					echo '</p';
+					echo '<br />';
+				$i++;
+			}
+			echo '<br />';
+			echo '<input type="hidden" name="depart" value='.$_POST['depart'].'>';
+			echo '<input type="hidden" name="arriver" value='.$_POST['arriver'].'>';
+			echo '<input type="hidden" name="nbr" value='.$_POST['nbr'].'>';
+			echo '<input type="hidden" name="ville" value='.$_POST['ville'].'>';
+			echo '<input class="bouton" style="position: flex;border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 50px;height: 50px "type="submit" name="submit" value="Payer">';
+			echo '</form>';
+
+		 ?>
 	</div>
 </div>
 
