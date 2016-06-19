@@ -26,6 +26,7 @@ unset($_SESSION['ville']);
 			</a>
 			<nav>
 				<ul>
+					<li><a href="index.php">Accueil</a></li>
 					<li><a href="derniereminute.php">Dernière minute</a></li>
 					<li><a href="promo.php">Promo</a></li>
 					<li><a href="panier.php">Panier</a></li>

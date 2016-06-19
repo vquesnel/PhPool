@@ -25,9 +25,9 @@ include ('calcule_prix.php');
 			<nav>
 				<ul>
 					<li><a href="index.php">Accueil</a></li>
+					<li><a href="allproducts.php">Tout</a></li>
 					<li><a href="derniereminute.php">Dernière minute</a></li>
 					<li><a href="promo.php">Promo</a></li>
-					<li><a href="panier.php">Panier</a></li>
 <?PHP
 if ($_SESSION['log'] == 'YES' || $_COOKIE["id"] !== NULL)
 {
