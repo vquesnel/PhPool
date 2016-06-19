@@ -42,7 +42,7 @@ Date de retour : '.$_POST['arriver'].'
 
 Nombre de passagers : '.$_POST['nbr'].'
 
-Prix total : '.$prix.'
+Prix total : '.$prix.' $
 
 Condition de remboursement : Aucune.
 

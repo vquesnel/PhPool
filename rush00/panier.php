@@ -1,6 +1,7 @@
 <?PHP
 session_start();
 include ('calcule_prix.php');
+print_r($_SESSION['panier']);
 ?>
 <!DOCTYPE html>
 <html>
@@ -99,8 +100,9 @@ else
 		echo '<p>Nombre de passager : '.$_SESSION['panier'][$i]['passager'].'</p>';
 		echo '<p style="width:150px">Prix total : '.(calcule_prix( $_SESSION['panier'][$i]['ville']) * $_SESSION['panier'][$i]['passager']).'</p>';
 		echo '<form method="post" action="valider.php">';
-		$i = calcule_prix( $_SESSION['panier'][$i]['ville']) * $_SESSION['panier'][$i]['passager'];
-		echo '<input type="hidden" name="nbr" value='.$r32[$i]['passager'].'>';
+
+
+		echo '<input type="hidden" name="nbr" value='.$_SESSION['panier'][$i]['passager'].'>';
 		echo '<input type="hidden" name="ville" value='.$_SESSION['panier'][$i]['ville'].'>';
 		echo '<input class="bouton" style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 50px;height: 50px "type="submit" name="submit" value="Payer">';
 		echo '<input class="bouton" style="border-radius: 3px; border-style: solid; background-color: rgb(238,238,238);width: 50px;height: 50px "type="submit" name="submit" value="Annuler">';

@@ -1,0 +1,24 @@
+                  Facture n° 1
+
+Societe : Voyageons
+Adresse : 96 Boulevard bessieres
+          75017 Paris
+Telephone : 0147200001
+
+
+Facture à shecc
+
+Date : June 19, 2016, 5:55 pm
+
+Reference : Québec
+
+Date de depart : 2016-06-22
+
+Date de retour : 2016-06-30
+
+Nombre de passagers : 12
+
+Prix total : 11400 $
+
+Condition de remboursement : Aucune.
+
