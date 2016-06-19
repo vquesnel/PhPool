@@ -37,9 +37,11 @@ if ($_SESSION['admin'] && $_SESSION['admin'] == 1)
 			<nav>
 				<ul>
 					<li><a href="index.php">Accueil</a></li>
+					<li><a href="allproducts.php">Tout</a></li>
 					<li><a href="derniereminute.php">Dernière minute</a></li>
-					<li><a href="sejour.php">Séjour</a></li>
 					<li><a href="promo.php">Promo</a></li>
+					<li><a href="panier.php">Panier</a></li>
+					<li><a href="sejour.php">Séjour</a></li>
 					<li><a href="delog.php">Deconnection</a></li>
 				</ul>
 			</nav>
