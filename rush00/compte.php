@@ -1,6 +1,7 @@
 <?PHP
 session_start();
 include ('delete.php');
+include ("testpassword.php");
 /*
 	Acces a son compte client
 	Gestion des identifiants
@@ -8,6 +9,11 @@ include ('delete.php');
 	deconection
 	suppression de son compte
  */
+if (empty($_SESSION['login']))
+{
+	header('Location:index.php');
+	exit();
+}
 if ($_SESSION['admin'] && $_SESSION['admin'] == 1)
 {
 	header('Location:74160.php');
@@ -114,7 +120,7 @@ if ($_POST['submite'] == 'Changer')
 {
 	if ($_POST['login'] != NULL && $_POST['oldpw'] != NULL && $_POST['newpw'] != NULL && $_POST['confirm_newpw'] != NULL && $_POST['submite'] == 'Changer')
 	{
-		if ($_POST['newpw'] == $_POST['confirm_newpw'])
+		if ($_POST['newpw'] == $_POST['confirm_newpw'] && testpassword($_POST['newpw']))
 		{
 			$mdp = hash('whirlpool', $_POST['oldpw']);
 			$newpw = hash('whirlpool', $_POST['newpw']);
@@ -130,7 +136,7 @@ if ($_POST['submite'] == 'Changer')
 			}
 			if ($tab[$i] != NULL)
 			{
-				if ($tab[$i]['passwd'] == $new['oldpw'])
+				if ($tab[$i]['passwd'] == $new['oldpw'] && testpassword($_POST['newpw']))
 				{
 					$tab[$i]['passwd'] = $new['newpw'];
 					$titi = serialize($tab);

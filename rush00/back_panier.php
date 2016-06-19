@@ -2,7 +2,7 @@
 session_start();
 if ($_POST['submit'] == "Reserver")
 {
-	if (!empty($_POST['passager']) && is_numeric($_POST['passager']))
+	if (!empty($_POST['passager']) && (is_numeric($_POST['passager']) && ($_POST['passager'] > 0)))
 	{
 		$date = date("Y-m-d");
 		if ($_POST['depart'] >= $date)

@@ -1,0 +1,24 @@
+                  Facture n° 2
+
+Societe : Voyageons
+Adresse : 96 Boulevard bessieres
+          75017 Paris
+Telephone : 0147200001
+
+
+Facture à jeanmeteorite
+
+Date : June 19, 2016, 6:39 pm
+
+Reference : Québec
+
+Date de depart : 2016-06-21
+
+Date de retour : 2016-06-30
+
+Nombre de passagers : 1
+
+Prix total : 950 $
+
+Condition de remboursement : Aucune.
+

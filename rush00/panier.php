@@ -1,7 +1,6 @@
 <?PHP
 session_start();
 include ('calcule_prix.php');
-print_r($_SESSION['panier']);
 ?>
 <!DOCTYPE html>
 <html>
@@ -123,21 +122,6 @@ else
 		</div>
 	</form>
 
-<!--
-Faire des cookie pour sauvegarder les donner utilisateur qui sont pas connecter en plus des SESSION
-
-Faire la meme chose que pour l'index pour afficher la selection de la commande
-
-faire un bouttom pour chaque voyage qui renvoie sur une page qui demande les info passager
-
-Pour finir faire un boutton qui valide la commande
-
-quand la commande est valider elle se valide sur une rubrique commande dans le panel admin et aussi dans le panel mon compte
-
-si la commande n'est pas valider elle reste afficher dans le panier
-
-gerer les commande avec le nom utilisateur qui permet de les retoruver pour pouvoir afficher toute les commande en cour
--->
 
 </body>
 </html>
