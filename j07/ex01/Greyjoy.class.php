@@ -1,6 +1,6 @@
 <?PHP
 Class Greyjoy {
-	protected $familyMotto = "We do not sow\n";
+	protected $familyMotto = "We do not sow";
 }
 
 ?>
