@@ -1,6 +1,6 @@
 <?PHP
 
-Class Matrix 
+Class Matrix
 {
 	const IDENTITY = 1;
 	const TRANSLATION = 2;
@@ -77,7 +77,7 @@ Class Matrix
 			$l = -$r;
 			$this->preset[0][0] = 2 *  $n / ($r - $l);
 			$this->preset[1][1] = 2 * $n / ($t - $b);
-			$this->preset[0][2] = ($r + $l) / ($r - $l);			
+			$this->preset[0][2] = ($r + $l) / ($r - $l);
 			$this->preset[1][2] = ($t + $b) / ($t - $b);
 			$this->preset[2][2] = -($f + $n) / ($f - $n);
 			$this->preset[3][2] = -1;
@@ -99,7 +99,7 @@ Class Matrix
 
 	public function __toString()
 	{
-		return ("M | vtcX | vtcY | vtcZ | vtx0\n"
+		return ("M | vtcX | vtcY | vtcZ | vtxO\n"
 			   ."-----------------------------\n"
 			   ."x | ".$this->_print_float($this->preset[0][0])." | ".$this->_print_float($this->preset[0][1])." | ".$this->_print_float($this->preset[0][2])." | ".$this->_print_float($this->preset[0][3])."\n"
 			   ."y | ".$this->_print_float($this->preset[1][0])." | ".$this->_print_float($this->preset[1][1])." | ".$this->_print_float($this->preset[1][2])." | ".$this->_print_float($this->preset[1][3])."\n"

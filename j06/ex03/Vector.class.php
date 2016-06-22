@@ -14,7 +14,7 @@ Class Vector
 	public function 	getY() { return str_replace(',', '', number_format($this->_y, 2)); }
 	public function 	getZ() { return str_replace(',', '', number_format($this->_z, 2)); }
 	public function 	getW() { return str_replace(',', '', number_format($this->_w, 2)); }
-	
+
 	public static function doc()
 	{
 		return (file_get_contents("Vector.doc.txt"));
@@ -32,21 +32,22 @@ Class Vector
 		$this->_z = floatval(str_replace(',', '', $dest->getZ())) - $orig->getZ();
 		if (self::$verbose == TRUE)
 		{
-			print("Vector( x: ".$this->getX().", y: ".$this->getY().", z: ".$this->getZ().", w: ".$this->getW()." ) constructed\n");
+			printf("Vector( x:%4s, y:%4s, z:%4s, w:%4s ) constructed\n", $this->getX(), $this->getY(), $this->getZ(), $this->getW());
 			return ;
 		}
 	}
 
 	public function __toString()
 	{
-		return ("Vector( x: ".$this->getX().", y: ".$this->getY().", z: ".$this->getZ().", w: ".$this->getW()." )");
+		$val = sprintf("Vector( x:%4s, y:%4s, z:%4s, w:%4s )", $this->getX(), $this->getY(), $this->getZ(), $this->getW());
+		return ($val);
 	}
 
 	public function __destruct()
 	{
 		if (self::$verbose == TRUE)
 		{
-			print("Vector( x: ".$this->getX().", y: ".$this->getY().", z: ".$this->getZ().", w: ".$this->getW()." ) destructed\n");
+			printf("Vector( x:%4s, y:%4s, z:%4s, w:%4s ) destructed\n", $this->getX(), $this->getY(), $this->getZ(), $this->getW());
 			return ;
 		}
 	}
@@ -59,8 +60,8 @@ Class Vector
 	public function normalize()
 	{
 		$dest = new Vertex(array( 'x' => ($this->getX() / $this->magnitude()),
-								  'y' => ($this->getY() / $this->magnitude()),
-								  'z' => ($this->getZ() / $this->magnitude())));
+					'y' => ($this->getY() / $this->magnitude()),
+					'z' => ($this->getZ() / $this->magnitude())));
 		return (new Vector(array("dest" => $dest)));
 	}
 
@@ -101,8 +102,8 @@ Class Vector
 	public function crossProduct(Vector $rhs)
 	{
 		$dest = new Vertex(array("x" => $this->getY() * $rhs->getZ() - $this->getZ() * $rhs->getY(),
-								 "y" => -($this->getX() * $rhs->getZ() - $this->getZ() * $rhs->getX()),
-								 "z" => $this->getX() * $rhs->getY() - $this->getY() * $rhs->getX()));
+					"y" => -($this->getX() * $rhs->getZ() - $this->getZ() * $rhs->getX()),
+					"z" => $this->getX() * $rhs->getY() - $this->getY() * $rhs->getX()));
 		return (new Vector(array("dest" => $dest)));
 	}
 }

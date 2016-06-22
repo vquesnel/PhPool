@@ -38,15 +38,15 @@ Class Vertex
 			$this->_w = $kwargs['w'];
 		else
 			$this->_w = 1.0;
-	
+
 		if (array_key_exists("color", $kwargs))
 			$this->_color = $kwargs['color'];
 		else
 			$this->_color = new COLOR(array("red" => 255, "green" => 255, "blue" => 255));
 		if (self::$verbose == TRUE)
 		{
-			echo "Vertex( x: ".$this->getX().", y: ".$this->getY().", z: ".$this->getZ().", w: ".$this->getW().", ";
-			echo "Color( red: ".$this->getColor()->red.", green: ".$this->getColor()->green.", blue: ".$this->getColor()->blue." ) ) constructed\n";
+			printf("Vertex( x: %4s, y: %4s, z: %4s, w: %4s, ", $this->getX(), $this->getY(), $this->getZ(), $this->getW());
+			printf("Color( red: %4s, green: %4s, blue: %4s ) ) constructed\n", $this->getColor()->red, $this->getColor()->green, $this->getColor()->blue);
 			return ;
 		}
 	}
@@ -55,8 +55,8 @@ Class Vertex
 	{
 		if (self::$verbose == TRUE)
 		{
-			echo "Vertex( x: ".$this->getX().", y: ".$this->getY().", z: ".$this->getZ().", w: ".$this->getW().", ";
-			echo "Color( red: ".$this->getColor()->red.", green: ".$this->getColor()->green.", blue: ".$this->getColor()->blue." ) ) destructed\n";
+			printf("Vertex( x: %4s, y: %4s, z: %4s, w: %4s, ", $this->getX(), $this->getY(), $this->getZ() , $this->getW());
+			printf("Color( red: %4s, green: %4s, blue: %4s ) ) destructed\n", $this->getColor()->red, $this->getColor()->green, $this->getColor()->blue);
 			return ;
 		}
 	}
@@ -64,9 +64,14 @@ Class Vertex
 	public function __toString()
 	{
 		if (self::$verbose == FALSE)
-			return ("Vertex( x: ".$this->getX().", y: ".$this->getY().", z: ".$this->getZ().", w: ".$this->getW()." )");
+		{
+			$val = sprintf("Vertex( x: %4s, y: %4s, z: %4s, w: %4s )", $this->getX(), $this->getY(), $this->getZ() , $this->getW());
+		}
 		else
-			return ("Vertex( x: ".$this->getX().", y: ".$this->getY().", z: ".$this->getZ().", w: ".$this->getW().", Color( red: ".$this->getColor()->red.", green: ".$this->getColor()->green.", blue: ".$this->getColor()->blue." ) )");
+		{
+			$val = sprintf("Vertex( x: %4s, y: %4s, z: %4s, w: %4s, Color( red: %4s, green: %4s, blue: %4s ) )", $this->getX(), $this->getY(), $this->getZ(), $this->getW(), $this->getColor()->red, $this->getColor()->green, $this->getColor()->blue);
+		}
+		return ($val);
 	}
 }
 

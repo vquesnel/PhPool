@@ -37,7 +37,7 @@ Class Color
 		}
 		if (self::$verbose == TRUE)
 		{
-			print("Color( red: ".$this->red.", green:   ".$this->green.", blue:   ".$this->blue." ) constructed.\n");
+			printf("Color( red: %+4s, green: %+4s, blue: %+4s ) constructed.\n", $this->red, $this->green, $this->blue);
 			return ;
 		}
 
@@ -47,17 +47,18 @@ Class Color
 	{
 		if (self::$verbose == TRUE)
 		{
-			print("Color( red: ".$this->red.", green:   ".$this->green.", blue:   ".$this->blue." ) destructed.\n");
-			return ;
+			printf("Color( red: %4s, green: %+4s, blue: %+4s ) destructed.\n", $this->red, $this->green, $this->blue);
+			return;
 		}
 	}
 
-	
+
 	public function __toString()
 	{
-		return ("Color( red: ".$this->red.", green:   ".$this->green.", blue:   ".$this->blue.")");
+			$val = sprintf("Color( red: %4s, green: %4s, blue: %4s )", $this->red, $this->green, $this->blue);
+			return ($val);
 	}
-	
+
 
 
 	public function add(Color $rhs)
