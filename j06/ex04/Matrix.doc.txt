@@ -1,0 +1,24 @@
+<- Matrix ----------------------------------------------------------------------
+The Matrix class represents a matrix.
+
+An instance can be constructed from a class Vertex 'preset' with one of values next:
+IDENTITY, SCALE, RX, RY, TRANSLATION, PROJECTION.
+
+When value is IDENTITY, scale value is necessary (factor of scale).
+
+When value is RX, RY or RZ (rotation rotation along axes), angle value is necessary (in degree).
+
+When value is TRANSLATION, vtc vector is necessary.
+
+When value is PROJECTION, fov value, ratio value (width/height of the image),
+near value (near clipping plane of the projection) and far value (far clipping plane of the projection) are necessary.
+
+The class provides the following methods:
+
+Matrix mult(Matrix $rhs):
+Returns a new result matrix multiplication of two matrices.
+
+Vertex transformVertex(Vertex $vtx):
+Returns a result of the new vertex of the vertex by the transformation matrix.
+
+---------------------------------------------------------------------- Matrix ->

@@ -1,0 +1,12 @@
+<- Vertex ----------------------------------------------------------------------
+The Vertex class represents a point in space.
+
+An instance can be constructed from x,y,z values:
+new Vertex( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0 ) );
+
+And with optional homogenous value and/or optional class color:
+new Vertex( array( 'x' => 1.0, 'y' => 0.0, 'z' => 0.0, 'color' => $green ) );
+new Vertex( array( 'x' => 9.0, 'y' => 9.0, 'z' => 9.0, 'w' => 3.0 ) );
+
+The class saves this elements.
+---------------------------------------------------------------------- Vertex ->

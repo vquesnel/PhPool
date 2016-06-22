@@ -1,0 +1,28 @@
+<- Camera ----------------------------------------------------------------------
+The Camera class represents a Camera.
+
+An instance can be constructed from the following values :
+
+Origin is a Vertex showing the position of the camera in the world basis.
+
+Orientation is a rotation Matrix in the world basis.
+
+Width is the width of the image.
+
+Height is the height of the image.
+
+Ratio is the ratio of the image. It is incompatible with Width and Height. The opposite is also true.
+
+Fov is the field of vision.
+
+Near is the near clipping plane of the projection. 
+
+Far is the far clipping plane of the projection. 
+
+
+The class provides the following method:
+
+Vertex watchVertex( Vertex $worldVertex ):
+Transforms a Vertex from 'world' coordonates to 'screen' coordonates.
+
+---------------------------------------------------------------------- Camera ->

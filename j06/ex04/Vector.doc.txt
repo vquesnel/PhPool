@@ -1,0 +1,40 @@
+<- Vector ----------------------------------------------------------------------
+The Vertex class represents a point in space.
+
+An instance can be constructed from a class Vertex 'dist':
+new Vector( array("dest" => $dest);
+
+And with optional class Vertex 'orig':
+new Vector( array("orig" => $orig, dest" => $dest);
+
+The class provides the following methods:
+
+float magnitude():
+Returns the length (or "norm") of the vector.
+
+Vector normalize():
+Returns the normalized vector. If the vector is already normalized, returns a fresh copy of the vector.
+
+Vector add(Vector $rhs):
+Returns the vector sum of two vectors.
+
+Vector sub(Vector $rhs):
+Returns the vector difference of the two vectors.
+
+Vector opposite():
+Returns the opposite vector.
+
+Vector scalarProduct($k):
+Returns the product of the vector with a scalar.
+
+float dotProduct(Vector $rhs):
+Returns the dot product of two vectors.
+
+float cos(Vector $rhs):
+Returns the cosine of the angle between two vectors.
+
+Vector crossProduct(Vector $rhs):
+Returns the cross product of two vectors.
+
+The class saves this elements.
+---------------------------------------------------------------------- Vector ->
