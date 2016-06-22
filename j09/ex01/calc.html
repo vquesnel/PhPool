@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script language="javascript">
+        setInterval("alert('Please, use me...')", 30000);
+
+        function calc() {
+            var first = document.getElementById("first").value;
+            var op = document.getElementById("operator").value;
+            var second = document.getElementById("second").value;
+            if (isNaN(first) == false && isNaN(second) == false && parseInt(first) >= 0 && parseInt(second) >= 0 && parseInt(first) == parseFloat(first) && parseInt(second) == parseFloat(second)) {
+                switch (op) {
+                case '+':
+                    console.log(parseInt(first) + parseInt(second));
+                    alert(parseInt(first) + parseInt(second));
+                    break;
+                case '-':
+                    console.log(parseInt(first) - parseInt(second));
+                    alert(parseInt(first) - parseInt(second));
+                    break;
+                case '*':
+                    console.log(parseInt(first) * parseInt(second));
+                    alert(parseInt(first) * parseInt(second));
+                    break;
+                case '/':
+                    if (parseInt(second) != 0) {
+                        console.log(parseInt(first) / parseInt(second));
+                        alert(parseInt(first) / parseInt(second));
+                    } else {
+                        console.log("It’s over 9000!");
+                        alert("It’s over 9000!");
+                    }
+                    break;
+                case '%':
+                    if (parseInt(second) != 0) {
+                        console.log(parseInt(first) % parseInt(second));
+                        alert(parseInt(first) % parseInt(second));
+                    } else {
+                        console.log("It’s over 9000!");
+                        alert("It’s over 9000!");
+                    }
+                    break;
+                }
+            } else
+                alert("Error :(");
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="calc()">
+        <input id="first" type="text" />
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input id="second" type="text" />
+        <input type="submit" value="Try me!" />
+    </form>
+</body>
+
+</html>
