@@ -16,32 +16,50 @@
 			{
 				switch (op)
 				{
-                case '+':
-                    alert(parseInt(first) + parseInt(second));
+					case '+':
+				console.log(parseInt(first) + parseInt(second));
+				alert(parseInt(first) + parseInt(second));
                     break;
                 case '-':
-                    alert(parseInt(first) - parseInt(second));
+					console.log(parseInt(first) - parseInt(second));
+					alert(parseInt(first) - parseInt(second));
                     break;
                 case '*':
+                    console.log(parseInt(first) * parseInt(second));
                     alert(parseInt(first) * parseInt(second));
                     break;
                 case '/':
                     if (parseInt(second) != 0)
-                        alert(parseInt(first) / parseInt(second));
+					{
+						console.log(parseInt(first) / parseInt(second));
+						alert(parseInt(first) / parseInt(second));
+					}
                     else
-                        alert("It’s over 9000!");
-                    break;
+					{
+						console.log("It’s over 9000!");
+						alert("It’s over 9000!");
+					}
+						break;
                 case '%':
                     if (parseInt(second) != 0)
-                        alert(parseInt(first) % parseInt(second));
+					{
+						console.log(parseInt(first) % parseInt(second));
+						alert(parseInt(first) % parseInt(second));
+					}
                     else
-                        alert("It’s over 9000!");
-                    break;
+					{
+						console.log("It’s over 9000!");
+						alert("It’s over 9000!");
+					}
+					break;
                 }
 			}
 			else
-                alert("Error :(");
-        }
+			{
+				console.log("Error :(");
+				alert("Error :(");
+			}
+	}
     </script>
 </head>
 
