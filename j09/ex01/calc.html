@@ -5,12 +5,17 @@
     <script language="javascript">
         setInterval("alert('Please, use me...')", 30000);
 
-        function calc() {
+		function calc()
+		{
             var first = document.getElementById("first").value;
             var op = document.getElementById("operator").value;
             var second = document.getElementById("second").value;
-            if (isNaN(first) == false && isNaN(second) == false && parseInt(first) >= 0 && parseInt(second) >= 0 && parseInt(first) == parseFloat(first) && parseInt(second) == parseFloat(second)) {
-                switch (op) {
+			if (isNaN(first) == false && isNaN(second) == false && parseInt(first) >= 0 
+			&& parseInt(second) >= 0 && parseInt(first) == parseFloat(first) &&
+			parseInt(second) == parseFloat(second)) 
+			{
+				switch (op)
+				{
                 case '+':
                     alert(parseInt(first) + parseInt(second));
                     break;
@@ -33,7 +38,8 @@
                         alert("It’s over 9000!");
                     break;
                 }
-            } else
+			}
+			else
                 alert("Error :(");
         }
     </script>
