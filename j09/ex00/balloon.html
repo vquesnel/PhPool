@@ -34,7 +34,7 @@
                 elem.style.width = '200px';
                 elem.style.height = '200px';
             }
-            countClicks = countClicks + 1;
+            countClicks++;
             if (countClicks > 2)
                 countClicks = 0;
             if (countClicks == 0)
@@ -46,24 +46,24 @@
         }
 
         function downBallon() {
-            var lol = document.getElementById("ballon");
-            var width = lol.offsetWidth;
-            var height = lol.offsetHeight;
+            var elem = document.getElementById("ballon");
+            var width = elem.offsetWidth;
+            var height = elem.offsetHeight;
             if (width > 200) {
                 width -= 5;
                 height -= 5;
             }
-            lol.style.width = width + 'px';
-            lol.style.height = height + 'px';
+            elem.style.width = width + 'px';
+            elem.style.height = height + 'px';
             countClicks--;
             if (countClicks < 0)
                 countClicks = 2;
             if (countClicks == 0)
-                lol.style.backgroundColor = "red";
+                elem.style.backgroundColor = "red";
             else if (countClicks == 1)
-                lol.style.backgroundColor = "green";
+                elem.style.backgroundColor = "green";
             else if (countClicks == 2)
-                lol.style.backgroundColor = "blue";
+                elem.style.backgroundColor = "blue";
         }
     </script>
     <div id="ballon" onClick="changeBallon()" onMouseOut="downBallon()"></div>
